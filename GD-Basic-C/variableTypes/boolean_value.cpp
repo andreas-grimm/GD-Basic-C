@@ -12,9 +12,7 @@ BooleanValue::BooleanValue() {
 
 
 BooleanValue::BooleanValue(bool bValue) {
-    mpoLogger->debug("BooleanValue::BooleanValue", "return: input: " + std::to_string(bValue));
     mbValue = bValue;
-    mpoLogger->debug("BooleanValue::BooleanValue", "return: stored: " + std::to_string(mbValue));
 };
 
 
@@ -67,11 +65,9 @@ BooleanValue::BooleanValue(string strValue) {
 */
 string BooleanValue::to_string() {
     if (mbValue == true) {
-        mpoLogger->debug("BooleanValue::to_string", "return: true " + std::to_string(mbValue));
-        return "True";
+        return "true";
     }
-    mpoLogger->debug("BooleanValue::to_string", "return: false " + std::to_string(mbValue));
-    return "False";
+    return "false";
 }
 
 
@@ -148,13 +144,11 @@ Value* BooleanValue::evaluate() {
 * @return the number value as an object
 */
 bool BooleanValue::isTrue() {
-    mpoLogger->debug("BooleanValue::isTrue", "return: " + std::to_string(mbValue));
     return mbValue;
 }
 
 
 Value* BooleanValue::equals(Value* poValue) {
-    mpoLogger->debug("BooleanValue::equals", "gets called ");
     if (getType() == poValue->getType()) {
         if (to_real() == poValue->to_real()) {
             return new BooleanValue(true);
@@ -168,7 +162,6 @@ Value* BooleanValue::equals(Value* poValue) {
 
 
 Value* BooleanValue::notEqual(Value* poValue) {
-    mpoLogger->debug("BooleanValue::notEquals", "gets called ");
     if (getType() == poValue->getType()) {
         if (to_real() != poValue->to_real()) {
             return new BooleanValue(true);

@@ -804,20 +804,21 @@ Expression* BasicParser::atomic(int* piPosition) {
             Expression oTwoParameterFunction = new Function(oToken, oParameter1Expression, oParameter2Expression);
             consumeToken(BasicTokenType.RIGHT_PAREN);
             return oTwoParameterFunction;
-
+*/
         // single parameter function calls
         case ABS: case ASC: case ATN: case CDBL: case CHR: case CINT: case COS: case EXP: case LEN: case LOG:
-            case LOG10: case NOT: case SIN: case SQR: case STR: case TAN: case VAL:
-            oToken = getToken(0);
-            _oLogger.debug("-atomic-> found token: <" + _iPosition + "> [" + oToken.getType().toString() + "] '"
-                    + oToken.getText() + "' [" + oToken.getLine() + "]");
-            _iPosition++;
-            consumeToken(BasicTokenType.LEFT_PAREN);
-            Expression oFunctionExpression = expression();
-            Expression oParameterFunction = new Function(oToken, oFunctionExpression);
-            consumeToken(BasicTokenType.RIGHT_PAREN);
-            return oParameterFunction;
-
+        case LOG10: case NOT: case SIN: case SQR: case STR: case TAN: case VAL: {
+            oToken = getToken(*piPosition, 0);
+            mpoLogger->debug("BasicParser::atomic", "found Token: <" + to_string(*piPosition) + "> [" + oUtil.to_string(oToken.getType()) + "] '"
+                             + oToken.getText() + "' [" + to_string(oToken.getLine()) + "]");
+            (*piPosition)++;
+            consumeToken(*piPosition, BasicTokenType::LEFT_PAREN);
+            Expression* poFunctionExpression = expression(piPosition);
+            Expression* poParameterFunction = new Function(oToken, poFunctionExpression);
+            consumeToken(*piPosition, BasicTokenType::RIGHT_PAREN);
+            return poParameterFunction;
+        }
+/*
         // zero parameter function calls
         case MEM: case RND: case TIME:
             oToken = getToken(0);

@@ -45,48 +45,6 @@ Value* OperatorExpression::evaluate() {
     Value* poRightValue = mpoRight->evaluate();
     mpoLogger->debug("OperatorExpression::evaluate"," LeftValue:" + poLeftValue->to_string() + ", RightValue: " + poRightValue->to_string());
 
-/*
-    if (mstrOperator != STRG_NULL) { // needed for Jasic
-        if (mstrOperator == "=") {
-            return poLeftValue->equals(poRightValue);
-        } else if (mstrOperator == "+") {
-            return poLeftValue->plus(poRightValue);
-        } else if (mstrOperator == "-") {
-            return poLeftValue->minus(poRightValue);
-        } else if (mstrOperator == "*") {
-            return poLeftValue->multiply(poRightValue);
-        } else if (mstrOperator == "/") {
-            return poLeftValue->divide(poRightValue);
-        } else if (mstrOperator == "^") {
-            return poLeftValue->power(poRightValue);
-        } else if ((mstrOperator == "&") || (mstrOperator == "AND")) {
-            return poLeftValue->land(poRightValue);
-        } else if ((mstrOperator == "|") || (mstrOperator == "OR")) {
-            return poLeftValue->lor(poRightValue);
-        } else if (mstrOperator == "==") {
-            return poLeftValue->equals(poRightValue);
-        } else if (mstrOperator == "!=") {
-            return poLeftValue->notEqual(poRightValue);
-        } else if (mstrOperator == "<") {
-            return poLeftValue->smallerThan(poRightValue);
-        } else if (mstrOperator == "<=") {
-            return poLeftValue->smallerEqualThan(poRightValue);
-        } else if (mstrOperator == ">") {
-            return poLeftValue->largerThan(poRightValue);
-        } else if (mstrOperator == ">=") {
-            return poLeftValue->largerEqualThan(poRightValue);
-        } else if (mstrOperator == "%") {
-            return poLeftValue->modulo(poRightValue);
-        } else if (mstrOperator ==  ">>") {
-            return poLeftValue->shiftRight(poRightValue);
-        } else if (mstrOperator == "<<") {
-            return poLeftValue->shiftLeft(poRightValue);
-        } else {
-            mpoLogger->error("OperatorExpression::evaluate", "Unknown operator: " + mstrOperator);
-            exit(ERR_UNKNOWN_OPERATOR);
-        }
-    }
-*/
     switch (meOperator) {
         case BasicTokenType::PLUS: {
             return poLeftValue->plus(poRightValue);
@@ -110,7 +68,6 @@ Value* OperatorExpression::evaluate() {
             return poLeftValue->lor(poRightValue);
         }
         case COMPARE_EQUAL: {
-            mpoLogger->debug("OperatorExpression::evaluate","call COMPARE_EQUAL ");
             return poLeftValue->equals(poRightValue);
         }
         case COMPARE_NOT_EQUAL: {

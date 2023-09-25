@@ -80,13 +80,9 @@ Value* RealValue::equals(Value* poValue) {
     bool bReturn = false;
     
     if (getType() == poValue->getType()) {
-        mpoLogger->debug("RealValue::equals","Compare: " + std::to_string(mfValue) + " with: " + std::to_string(poValue->to_real()));
         if (mfValue == poValue->to_real()) {
-            mpoLogger->debug("RealValue::equals","return true");
             bReturn = true;
         }
-
-        mpoLogger->debug("RealValue::equals","return false");
     } else {
         mpoLogger->error("RealValue::equals", "Syntax Error: Incompatible types: equals(`" + getTypeToString() + "`, `" + poValue->getTypeToString() + "`)");
         exit(ERR_SYNTAX_ERROR);

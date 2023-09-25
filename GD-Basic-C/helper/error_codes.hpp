@@ -23,13 +23,14 @@
 #define ERR_UNDEFINED_EXPRESSION        10
 #define ERR_UNDEFINED_STATEMENT         11
 #define ERR_UNDEFINED_VARIABLE          12
-#define ERR_PARENTHESIS_INCORRECT       13
-#define ERR_OUT_OF_BOUNDS               14
-#define ERR_UNKNOWN_OPERATOR            15
-#define ERR_GOTO_UNKNOWN_TARGET         16
-#define ERR_UNKNOWN_IF_STMT             17
-#define ERR_EMPTY_STACK                 18
-#define ERR_UNDEF_JMP_TARGET            19
+#define ERR_UNDEFINED_FUNCTION          13
+#define ERR_PARENTHESIS_INCORRECT       14
+#define ERR_OUT_OF_BOUNDS               15
+#define ERR_UNKNOWN_OPERATOR            16
+#define ERR_GOTO_UNKNOWN_TARGET         17
+#define ERR_UNKNOWN_IF_STMT             18
+#define ERR_EMPTY_STACK                 19
+#define ERR_UNDEF_JMP_TARGET            20
 
 // Interpreter coding error
 #define ERR_UNCOVERED_MANDATORY_CLASS   40001

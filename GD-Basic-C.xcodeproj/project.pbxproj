@@ -44,6 +44,8 @@
 		E170E8202A9F462A00B992B3 /* rem_statement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E170E81E2A9F462A00B992B3 /* rem_statement.cpp */; };
 		E170E8262A9F727500B992B3 /* string_expressions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E170E8242A9F727500B992B3 /* string_expressions.cpp */; };
 		E170E8292A9F7F0A00B992B3 /* print_statement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E170E8272A9F7F0A00B992B3 /* print_statement.cpp */; };
+		E176B5A92AC1D1C9009379AA /* function.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E176B5A72AC1D1C9009379AA /* function.cpp */; };
+		E176B5AC2AC1E233009379AA /* abs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E176B5AA2AC1E233009379AA /* abs.cpp */; };
 		E197CCD92ABA895100666585 /* goto_statement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E197CCD72ABA895100666585 /* goto_statement.cpp */; };
 		E197CCDC2ABABCCC00666585 /* program_pointer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E197CCDA2ABABCCC00666585 /* program_pointer.cpp */; };
 		E197CCDF2ABB206100666585 /* if_then_statement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E197CCDD2ABB206100666585 /* if_then_statement.cpp */; };
@@ -153,6 +155,10 @@
 		E170E8252A9F727500B992B3 /* string_expressions.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = string_expressions.hpp; sourceTree = "<group>"; };
 		E170E8272A9F7F0A00B992B3 /* print_statement.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = print_statement.cpp; sourceTree = "<group>"; };
 		E170E8282A9F7F0A00B992B3 /* print_statement.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = print_statement.hpp; sourceTree = "<group>"; };
+		E176B5A72AC1D1C9009379AA /* function.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = function.cpp; sourceTree = "<group>"; };
+		E176B5A82AC1D1C9009379AA /* function.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = function.hpp; sourceTree = "<group>"; };
+		E176B5AA2AC1E233009379AA /* abs.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = abs.cpp; sourceTree = "<group>"; };
+		E176B5AB2AC1E233009379AA /* abs.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = abs.hpp; sourceTree = "<group>"; };
 		E197CCD72ABA895100666585 /* goto_statement.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = goto_statement.cpp; sourceTree = "<group>"; };
 		E197CCD82ABA895100666585 /* goto_statement.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = goto_statement.hpp; sourceTree = "<group>"; };
 		E197CCDA2ABABCCC00666585 /* program_pointer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = program_pointer.cpp; sourceTree = "<group>"; };
@@ -209,6 +215,7 @@
 		E170E2052A8B61500065C416 /* GD-Basic-C */ = {
 			isa = PBXGroup;
 			children = (
+				E176B5A62AC1D1A4009379AA /* function */,
 				E197CCF32ABC7DC000666585 /* runtimeManager */,
 				E170E7FB2A977CBA00B992B3 /* variableTypes */,
 				E170E7F42A975F5F00B992B3 /* statements */,
@@ -372,6 +379,17 @@
 			path = variableTypes;
 			sourceTree = "<group>";
 		};
+		E176B5A62AC1D1A4009379AA /* function */ = {
+			isa = PBXGroup;
+			children = (
+				E176B5A72AC1D1C9009379AA /* function.cpp */,
+				E176B5A82AC1D1C9009379AA /* function.hpp */,
+				E176B5AA2AC1E233009379AA /* abs.cpp */,
+				E176B5AB2AC1E233009379AA /* abs.hpp */,
+			);
+			path = function;
+			sourceTree = "<group>";
+		};
 		E197CCF32ABC7DC000666585 /* runtimeManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -443,6 +461,7 @@
 				E197CCE52ABB81A600666585 /* end_statement.cpp in Sources */,
 				E170E8142A9CF96C00B992B3 /* data_statement.cpp in Sources */,
 				E170E81A2A9DD56800B992B3 /* label_statement.cpp in Sources */,
+				E176B5A92AC1D1C9009379AA /* function.cpp in Sources */,
 				E170E2262A8BC1800065C416 /* program.cpp in Sources */,
 				E197CCF62ABC7DE200666585 /* execute.cpp in Sources */,
 				E170E8262A9F727500B992B3 /* string_expressions.cpp in Sources */,
@@ -487,6 +506,7 @@
 				E170E21F2A8BA24D0065C416 /* time.cpp in Sources */,
 				E170E2142A8B74AE0065C416 /* command_line.cpp in Sources */,
 				E197CCE82ABC18F600666585 /* else_statement.cpp in Sources */,
+				E176B5AC2AC1E233009379AA /* abs.cpp in Sources */,
 				E170E2372A8CA99A0065C416 /* token.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

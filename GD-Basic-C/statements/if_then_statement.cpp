@@ -56,9 +56,7 @@ void IfThenStatement::execute() {
     }
 
     // here we are using line numbers to jump to the destination. This is only done for BASIC programs.
-    mpoLogger->debug("IfThenStatement::execute", "mpoCondition = " + mpoCondition->content());
     bool bValue = mpoCondition->evaluate()->to_bool();
-    mpoLogger->debug("IfThenStatement::execute", "Evaluated condition = " + std::to_string(bValue));
 
     // different to the code above: when the result of the condition is false, then ignore the next block and
     // jump to the END-IF statement.
