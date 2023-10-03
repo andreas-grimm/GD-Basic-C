@@ -5,7 +5,8 @@
 //  Created by Andreas Grimm on 21/09/2023.
 //
 
-#include "Execute.hpp"
+#include "execute.hpp"
+
 Execute::Execute(Program* poProgram) {
     mvpoPreRunStatements = poProgram->getPreRunStatements();
     mvpoStatements = poProgram->getStatements();

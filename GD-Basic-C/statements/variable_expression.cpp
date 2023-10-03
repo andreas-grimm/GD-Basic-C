@@ -26,7 +26,6 @@ VariableExpression::VariableExpression(string strName) {
 Value* VariableExpression::evaluate() {
     VariableManagement* poVariableManager = VariableManagement::getInstance();
     Normalizer oNormalizer;
-    StringUtil oUtil;
     
     string strKey = mstrName;
 
@@ -37,7 +36,7 @@ Value* VariableExpression::evaluate() {
         string strInner = strKey.substr(ulIndexStart + 1, ulIndexEnd);
 
         if (strInner.find_last_of(",") > 0) {
-            vector<string> vstrCommaSeperatedList = oUtil.split(strInner,",");
+            vector<string> vstrCommaSeperatedList = StringUtil::split(strInner,",");
             string strCommaSeperatedList;
 
             for (auto strExpression: vstrCommaSeperatedList) {

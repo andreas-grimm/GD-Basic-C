@@ -26,7 +26,7 @@ public:
     
     string getName();
     string content();
-    
+
 private:
     string mstrName;
     Logger* poLogger = Logger::getInstance();

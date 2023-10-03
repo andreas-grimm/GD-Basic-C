@@ -7,6 +7,9 @@
 
 #include "string_util.hpp"
 
+StringUtil::StringUtil() {
+}
+
 vector<string> StringUtil::split(string strInputString, string strSplitToken) {
     vector<string> vstrResult;
     
@@ -36,3 +39,19 @@ string StringUtil::from_vector(vector<string> vstrVector, string strSeperator) {
     
     return strReturn;
 };
+
+string StringUtil::to_upper(string strString) {
+    int iIndex = 0;
+    char cCharacter;
+    
+    string strReturn;
+    
+    while (strString[iIndex]) {
+        cCharacter = strString[iIndex];
+        strReturn += toupper(cCharacter);
+        iIndex++;
+    }
+    
+    return strReturn;
+}
+

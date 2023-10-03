@@ -20,13 +20,12 @@ int main(int argc, char *argv[]) {
     Printer oPrinter;
     CommandLine *poCommandLine = new CommandLine(argc, argv);
     Basic *poBasic;
-    Memory *poMemory = new Memory();
     
     string strLogLevel = "";
     string strBasicFile = "";
     string strBasicFileLogMessage ="Program file to be processed ";
     int iErrorCode = OK;
-    int64_t llMemory = poMemory->getTotalMemory() / 1024000000;
+    int64_t llMemory = Memory::getTotalMemory() / 1024000;
    
     // process the command line
     if (poCommandLine->containsLogLevel() == YES) {

@@ -29,10 +29,10 @@ class Expression {
 public:
     virtual Value* evaluate() = 0;
     virtual string content() = 0;
-    
+
 private:
     Logger* mpoLogger = Logger::getInstance();
-;
+
 };
 
 #endif /* expression_hpp */

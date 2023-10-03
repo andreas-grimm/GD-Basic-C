@@ -37,13 +37,12 @@ string MacroList::getFunction(string strParameterList, string strMacroName) {
     string strWorkParameterList = strParameterList;
     vector<string> vstrParametersFromSource;
     vector<string> vstrParametersFromDEF;
-    StringUtil oStringUtil;
 
     // Build the parameter list
     vstrParametersFromSource = toVector(strParameterList);
 
     mpoLogger->debug("MacroList", "Macros found: " + strMacroName);
-    mpoLogger->debug("MacroList", "Parameters: " + oStringUtil.from_vector(vstrParametersFromSource, ";"));
+    mpoLogger->debug("MacroList", "Parameters: " + StringUtil::from_vector(vstrParametersFromSource, ";"));
 
     for (auto oMacro : mmstrstrMacroList) {
         string strKey = oMacro.first;
@@ -56,7 +55,7 @@ string MacroList::getFunction(string strParameterList, string strMacroName) {
 
                 if (strMacroName.find(strMacroKey)) {
                     vstrParametersFromDEF = oParameters.second;
-                    mpoLogger->debug("MacroList", "Matched Parameters: " + oStringUtil.from_vector(vstrParametersFromDEF, ";"));
+                    mpoLogger->debug("MacroList", "Matched Parameters: " + StringUtil::from_vector(vstrParametersFromDEF, ";"));
                 }
             }
 /** TO-DO
@@ -82,13 +81,11 @@ string MacroList::getFunction(string strParameterList, string strMacroName) {
 }
 
 void MacroList::print() {
-    StringUtil oStringUtil;
-    
     mpoLogger->debug("MacroList", "List of Macros:");
     for (auto i : mmstrstrMacroList)    // auto keyword
         mpoLogger->debug("MacroList", "Macro List: Name = [" + i.first + "] Function = [" + i.second +"]");
     for (auto j: mmstrvstrParameterList)
-        mpoLogger->debug("MacroList", "Macro List: Name = [" + j.first + "] Parameter = [" + oStringUtil.from_vector(j.second, ";") +"]");
+        mpoLogger->debug("MacroList", "Macro List: Name = [" + j.first + "] Parameter = [" + StringUtil::from_vector(j.second, ";") +"]");
 }
 
 vector<string> MacroList::toVector (string strStringCodedVector) {

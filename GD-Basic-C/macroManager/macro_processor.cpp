@@ -76,8 +76,7 @@ string MacroProcessor::process(string strProgram){
     // Step 3: Run thru the source code again and find macro usage to replace it...
     // Convert the program into a list of lines
     mpoLogger->info("MacroProcessor::process", "Adjusting source code...");
-    StringUtil oStringUtil;
-    vector<string> vstrProgramLines = oStringUtil.split(strProgram,"\n");
+    vector<string> vstrProgramLines = StringUtil::split(strProgram,"\n");
 
     for (auto strProgramLine: vstrProgramLines) {
         string strStatus = "";

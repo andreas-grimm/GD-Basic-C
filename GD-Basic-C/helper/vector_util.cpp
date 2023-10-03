@@ -7,6 +7,9 @@
 
 #include "vector_util.hpp"
 
+VectorUtil::VectorUtil() {
+}
+
 int VectorUtil::find_first(vector<Statement*> vpoStatements, Statement* poStatement) {
     int iIndex = 0;
     

@@ -22,7 +22,7 @@ class Memory {
 public:
     Memory();
     
-    int64_t getTotalMemory();
+    static int64_t getTotalMemory();
 };
  
 #endif /* memory_hpp */

@@ -19,6 +19,28 @@
 #include "../tokenizer/basic_token_type_util.hpp"
 
 #include "../function/abs.hpp"
+#include "../function/asc.hpp"
+#include "../function/atn.hpp"
+#include "../function/cdbl.hpp"
+#include "../function/chr.hpp"
+#include "../function/cint.hpp"
+#include "../function/cos.hpp"
+#include "../function/exp.hpp"
+#include "../function/instr.hpp"
+#include "../function/left.hpp"
+#include "../function/len.hpp"
+#include "../function/log.hpp"
+#include "../function/log10.hpp"
+#include "../function/mem.hpp"
+#include "../function/mid.hpp"
+#include "../function/right.hpp"
+#include "../function/rnd.hpp"
+#include "../function/sin.hpp"
+#include "../function/sqr.hpp"
+#include "../function/str.hpp"
+#include "../function/system_func.hpp"
+#include "../function/tan.hpp"
+#include "../function/val.hpp"
 
 using namespace std;
 

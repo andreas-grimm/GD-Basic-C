@@ -18,9 +18,14 @@ using namespace std;
 class StringUtil {
     
 public:
-    vector<string> split(string strInputString, string strSplitToken);
+    static vector<string> split(string strInputString, string strSplitToken);
     
-    string from_vector(vector<string> vstrVector, string strSeperator);
+    static string from_vector(vector<string> vstrVector, string strSeperator);
+    
+    static string to_upper(string strString);
+    
+private:
+    StringUtil();
 };
 
 #endif /* string_util_hpp */

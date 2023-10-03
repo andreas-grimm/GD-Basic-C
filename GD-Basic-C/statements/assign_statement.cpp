@@ -48,7 +48,6 @@ int AssignStatement::getTokenNumber() {
  * @throws Exception - any excpetion coming from the memory management
  */
 void AssignStatement::execute() {
-    StringUtil oUtil;
     Normalizer oNormalizer;
     string strKey = mstrKey;
 
@@ -61,7 +60,7 @@ void AssignStatement::execute() {
         string strInner = strKey.substr(ulIndexStart + 1, ulIndexEnd);
 
         if (strInner.find_first_of(",")) {
-            vector<string> vstrCommaSeperatedList = oUtil.split(strInner, ",");
+            vector<string> vstrCommaSeperatedList = StringUtil::split(strInner, ",");
             string strCommaSeperatedList;
 
             for (auto pstrExpression: vstrCommaSeperatedList) {

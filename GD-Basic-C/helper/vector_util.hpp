@@ -16,6 +16,9 @@
 class VectorUtil {
 public:
     static int find_first(vector<Statement*> vpoStatements, Statement* poStatement);
+    
+private:
+    VectorUtil();
 };
 
 #endif /* vector_util_hpp */

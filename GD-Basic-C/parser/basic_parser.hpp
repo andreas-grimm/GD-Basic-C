@@ -40,6 +40,8 @@
 #include "../statements/else_statement.hpp"
 #include "../statements/colon_statement.hpp"
 
+#include "../function/function.hpp"
+
 using namespace std;
 
 class BasicParser {

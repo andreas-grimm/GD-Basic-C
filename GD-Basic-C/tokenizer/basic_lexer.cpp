@@ -22,12 +22,11 @@ vector<Token> BasicLexer::tokenize(string strSource) {
     vector<Token> voTokens;
     vector<string> vstrProgramLines;
     Normalizer oNormalizer;
-    StringUtil oUtil;
     
     // Convert the program into a list of lines
     mpoLogger->debug("BasicLexer::tokenize", "Split into Lines...");
     
-    vstrProgramLines = oUtil.split(strSource, "\n");
+    vstrProgramLines = StringUtil::split(strSource, "\n");
 
     bool bIsStringRunning = false;
     int iLastLineNumber = -1;

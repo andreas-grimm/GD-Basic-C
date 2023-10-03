@@ -8,7 +8,6 @@
 #include "memory.hpp"
 
 Memory::Memory() {
-    
 };
 
 int64_t Memory::getTotalMemory() {
